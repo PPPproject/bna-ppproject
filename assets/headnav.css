@@ -26,6 +26,11 @@
   resize: both;
 }
 
+.viz {
+  margin: 5%; /* Same as the width of the sidebar */	
+  resize: both;
+}
+
 .section-title {
   font-family: "Helvetica";
   color: black;
