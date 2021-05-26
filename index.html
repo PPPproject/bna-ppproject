@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <title>PPP Home</title>
   <link rel="stylesheet" href="assets/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script> <!-- Daniel's D3 version, will try changing later, but won't break it for now.-->
+  <script src="https://unpkg.com/topojson-client@3"></script> <!--Same, not sure if unpkg is a cdn. Think it is, seen it before.-->
   <script src="assets/map.js"></script>
 </head>
 
@@ -39,7 +41,7 @@
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
 		</p>
 		<div class="viz" id="rehana-1"></div>
-		<p class="main-text">Credit: <a href="https://observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california">PPP loans in California: top industries and sectors by rehanam93</a></p>
+		<!-- <p class="main-text">Credit: <a href="https://observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california">PPP loans in California: top industries and sectors by rehanam93</a></p> -->
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
@@ -52,7 +54,7 @@
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
 		</p>
 		<div class="viz" id="rehana-2"></div>
-		<p class="main-text">Credit: <a href="https://observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california">PPP loans in California: top industries and sectors by rehanam93</a></p>
+		<!-- <p class="main-text">Credit: <a href="https://observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california">PPP loans in California: top industries and sectors by rehanam93</a></p> -->
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
@@ -69,7 +71,8 @@
 		<p class="main-text">
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 		</p>
-		
+		<div class="viz" id="daniel-map"></div>
+		<script src="assets/daniel-map.js"></script>
 		<a href="#top">Back to top</a>
 	</div>
 
@@ -79,29 +82,11 @@
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 		</p>
 		<div class="viz" id="viz-3"></div>
-		<script>
-			var w = 1000;
-			var h = 700;
-
-			// plot container on page
-			d3.select("#viz-3")
-				.append("svg")
-				.attr("viewBox", "0 0 " + w + " " + h)
-				.attr("preserveAspectRatio", "xMinYMin meet")
-				.style("background-color", "whitesmoke")
-				.append("g")
-				.attr("transform",
-						"translate(" + margin.left + "," + margin.top + ")")
-				.append("circle")
-					.attr('cx',25)
-					.attr('cy',25)
-					.attr('r',15)
-					.style('fill','purple')
-
-		</script> 
+		<script src="assets/test.js"></script> 
 		<a href="#top">Back to top</a>
 	</div>
 
+	<!-- Sources/end -->
 	<div id="background">
 		<h2 class="section-title">Sources</h2>
 		<p class="main-text">
