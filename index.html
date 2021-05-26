@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>PPP Home</title>
-  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous"></script> -->
   <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script> <!-- Daniel's D3 version, will try changing later, but won't break it for now.-->
   <script src="https://unpkg.com/topojson-client@3"></script> <!--Same, not sure if unpkg is a cdn. Think it is, seen it before.-->
-  <script src="assets/map.js"></script>
 </head>
 
 <body>
@@ -19,8 +18,8 @@
 		<a href="#section-2">Viz 2</a>
 		<a href="#section-3">Viz 3</a>
 		<a href="#sources">Sources</a>
-		<a href="https://data-driven.news/bna/2021/"><img src="assets/class.png" alt="Classroom icon" style="width:20px;height:20px;"></img></a>
-		<a href="https://github.com/PPPproject/pppproject.github.io"><img src="assets/gh-logo.png" alt="Github logo icon" style="width:20px;height:20px;"></img></a>
+		<a href="https://data-driven.news/bna/2021/"><img src="assets/img/class.png" alt="Classroom icon" style="width:20px;height:20px;"></img></a>
+		<a href="https://github.com/PPPproject/pppproject.github.io"><img src="assets/img/gh-logo.png" alt="Github logo icon" style="width:20px;height:20px;"></img></a>
 	</div>
 
 	<!-- Headers -->
@@ -58,7 +57,7 @@
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
-			new Runtime().module(define, name => {
+			new Runtime().modupngle(define, name => {
 			if (name === "viewof Sectorchart") return new Inspector(document.querySelector("#rehana-2"));
 			});
 		</script>
@@ -72,7 +71,7 @@
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 		</p>
 		<div class="viz" id="daniel-map"></div>
-		<script src="assets/daniel-map.js"></script>
+		<script src="assets/js/daniel-map.js"></script>
 		<a href="#top">Back to top</a>
 	</div>
 
@@ -82,7 +81,7 @@
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 		</p>
 		<div class="viz" id="viz-3"></div>
-		<script src="assets/test.js"></script> 
+		<script src="assets/js/test.js"></script> 
 		<a href="#top">Back to top</a>
 	</div>
 

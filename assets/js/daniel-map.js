@@ -14,8 +14,8 @@ var projection = d3.geoMercator()
 var path = d3.geoPath().projection(projection);
 var color = d3.scaleQuantize([0,3000],d3.schemeBlues[9]);
 
-var map = d3.json("assets/ca.topojson");
-var data = d3.csv("assets/county_pc_rates.csv");
+var map = d3.json("assets/data/ca.topojson");
+var data = d3.csv("assets/data/county_pc_rates.csv");
 
 // main function call
 Promise.all([map, data]).then(function(values){
