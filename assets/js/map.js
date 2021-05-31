@@ -1,5 +1,5 @@
 // setup
-var w = 1400;
+var w = 450;
 var h = 700;
 var county = "LOS ANGELES";
 
@@ -11,7 +11,7 @@ var svgContainer = d3.select("#map")
                 .classed("svg-content", true);
 var projection = d3.geoMercator()
                     .scale(1000 * 2)
-                    .center([-120, 36])
+                    .center([-119, 36])
                     .translate([w/2, h/2]);		
 var path = d3.geoPath().projection(projection);
 var color = d3.scaleQuantize([0,3000],d3.schemeBlues[9]);
@@ -43,7 +43,7 @@ Promise.all([map, data]).then(function(values){
             .attr("class","county")
             //image attributes
             .attr("stroke", "black")
-            .attr("stroke-width", 0.75)
+            .attr("stroke-width", 0.5)
             .attr("fill", "blue")
             .attr("fill", function(d){
                 var stat = 0
@@ -58,12 +58,12 @@ Promise.all([map, data]).then(function(values){
             .attr("fill-opacity", 1)
             .attr("fill-rule", "nonzero")
             .on('mouseover', function(d) {
-                console.log(d.properties["name"].toUpperCase());
+                // console.log(d.properties["name"].toUpperCase());
                 d3.select(this).style('stroke-width',1).style('stroke','#e49444');
             })
             .on('mouseout', function(d) {
-                console.log(d.properties["name"].toUpperCase());
-                d3.select(this).style('stroke-width',0.75).style('stroke','black');
+                // console.log(d.properties["name"].toUpperCase());
+                d3.select(this).style('stroke-width',0.5).style('stroke','black');
             })
             .on('click', function(d, i) {
                 
