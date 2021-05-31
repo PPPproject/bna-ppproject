@@ -114,19 +114,19 @@ Promise.all([map, data]).then(function(values){
                 vegaEmbed('#race', county_maps);
 
                 // give summary/overview dashboard
-                var overview = {
-                    $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-                    description: 'One summary dashboard of county stats during entirety of PPP Loan Program',
-                    data: {url:'assets/data/county_pc_rates.csv'},
-                    mark: 'bar',
-                    encoding: {
-                        x: {field: 'ProjectCountyName', type: 'Nominal', title:'County'},
-                        y: {field: 'c.num.entries', type: 'Quantitative', title:'PC Loans Dispersed'},
-                        color: {field:'Race', type: 'nominal'}, // change this to highlight action?
-                        tooltip: [{field:'ProjectCountyName', type:'Nominal', title:'County'}, 
-                                    {field: 'pc.num.entries', type: 'Quantitative', title:'PC Loans Dispersed'}
-                        ]
-                    }
+                // var overview = {
+                //     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+                //     description: 'One summary dashboard of county stats during entirety of PPP Loan Program',
+                //     data: {url:'assets/data/county_pc_rates.csv'},
+                //     mark: 'bar',
+                //     encoding: {
+                //         x: {field: 'ProjectCountyName', type: 'Nominal', title:'County'},
+                //         y: {field: 'c.num.entries', type: 'Quantitative', title:'PC Loans Dispersed'},
+                //         color: {field:'Race', type: 'nominal'}, // change this to highlight action?
+                //         tooltip: [{field:'ProjectCountyName', type:'Nominal', title:'County'}, 
+                //                     {field: 'pc.num.entries', type: 'Quantitative', title:'PC Loans Dispersed'}
+                //         ]
+                //     }
                     // params: [
                     //     {
                     //       name: "highlight",
@@ -164,8 +164,8 @@ Promise.all([map, data]).then(function(values){
                     //     }
                     //   },
 
-                }
-                vegaEmbed('#overview', overview);
+                // }
+                // vegaEmbed('#overview', overview);
             });
 });
 
