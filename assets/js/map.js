@@ -71,10 +71,10 @@ Promise.all([map, data]).then(function(values){
                 county = d.properties["name"].toUpperCase();
                 // console.log(county);
 
-                // draw Vega maps
+                // draw Vega county maps
                 var county_maps = {
                     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-                    description: 'Filterable bar chart of racial demographics with available data.',
+                    description: 'Two bar chart of racial and gender demographics with available data in selected county.',
                     background: 'whitesmoke',
                     data: {url:"assets/data/demog.csv"},
                     hconcat: [
@@ -112,6 +112,60 @@ Promise.all([map, data]).then(function(values){
                         }
                 ]};
                 vegaEmbed('#race', county_maps);
+
+                // give summary/overview dashboard
+                var overview = {
+                    $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+                    description: 'One summary dashboard of county stats during entirety of PPP Loan Program',
+                    data: {url:'assets/data/county_pc_rates.csv'},
+                    mark: 'bar',
+                    encoding: {
+                        x: {field: 'ProjectCountyName', type: 'Nominal', title:'County'},
+                        y: {field: 'c.num.entries', type: 'Quantitative', title:'PC Loans Dispersed'},
+                        color: {field:'Race', type: 'nominal'}, // change this to highlight action?
+                        tooltip: [{field:'ProjectCountyName', type:'Nominal', title:'County'}, 
+                                    {field: 'pc.num.entries', type: 'Quantitative', title:'PC Loans Dispersed'}
+                        ]
+                    }
+                    // params: [
+                    //     {
+                    //       name: "highlight",
+                    //       select: {type: "point", on: "mouseover"}
+                    //     },
+                    //     {name: "select", select: "point"}
+                    //   ],
+                    //   mark: {
+                    //     type: "bar",
+                    //     fill: "#4C78A8",
+                    //     stroke: "black",
+                    //     cursor: "pointer"
+                    //   },
+                    //   encoding: {
+                    //     x: {field: "ProjectCountyName", type: "Nominal"},
+                    //     y: {field: "pc.num.entries", type: "Quantitative"},
+                    //     fillOpacity: {
+                    //       condition: {param: "select", value: 1},
+                    //       value: 0.3
+                    //     },
+                    //     strokeWidth: {
+                    //       condition: [
+                    //         {
+                    //           param: "select",
+                    //           empty: false,
+                    //           value: 2
+                    //         },
+                    //         {
+                    //           param: "highlight",
+                    //           empty: false,
+                    //           value: 1
+                    //         }
+                    //       ],
+                    //       value: 0
+                    //     }
+                    //   },
+
+                }
+                vegaEmbed('#overview', overview);
             });
 });
 
