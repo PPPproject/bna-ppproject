@@ -19,6 +19,10 @@ var color = d3.scaleQuantize([0,3000],d3.schemeBlues[9]);
 var map = d3.json("assets/data/ca.topojson");
 var data = d3.csv("assets/data/county_pc_rates.csv");
 
+function mouseover() {
+    
+};
+
 // main function call
 Promise.all([map, data]).then(function(values){
     // topojson to geojson
@@ -55,7 +59,7 @@ Promise.all([map, data]).then(function(values){
             .attr("fill-rule", "nonzero")
             .on('mouseover', function(d) {
                 console.log(d.properties["name"].toUpperCase());
-                d3.select(this).style('stroke-width',1).style('stroke','orange');
+                d3.select(this).style('stroke-width',1).style('stroke','#e49444');
             })
             .on('mouseout', function(d) {
                 console.log(d.properties["name"].toUpperCase());
@@ -69,11 +73,10 @@ Promise.all([map, data]).then(function(values){
 
                 // draw Vega maps
                 var county_maps = {
-                    // title: {field: 'ProjectCountyName', type:'nominal'},
                     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-                    background: 'whitesmoke',
                     description: 'Filterable bar chart of racial demographics with available data.',
-                    data: {url:"https://raw.githubusercontent.com/lilyjtaylor22/stan20-21/main/demog.csv"}, // relative path didn't work ... troubleshoot that later
+                    background: 'whitesmoke',
+                    data: {url:"assets/data/demog.csv"},
                     hconcat: [
                         {
                             transform: [{filter: `datum.ProjectCountyName=="${county}"`},
@@ -85,7 +88,7 @@ Promise.all([map, data]).then(function(values){
                                 x: {field: 'DateApproved', type: 'temporal', title:'Date Approved'},
                                 y: {field: 'InitialApprovalAmount', type: 'quantitative', aggregate:'mean', title:'Mean Approval Amount'},
                                 color: {field:'Race', type: 'nominal'}, // default Tableau10
-                                tooltip: [{field:'ProjectCountyName', type:'Nominal'}, 
+                                tooltip: [{field:'ProjectCountyName', type:'Nominal', title:'County'}, 
                                             {field:'Race', type:'Nominal'}, 
                                             {field:'InitialApprovalAmount', type: 'quantitative', aggregate:'mean', title:'Init. App. Amt.'} // figure out how to aggregate this stat. 
                                 ]
@@ -101,7 +104,7 @@ Promise.all([map, data]).then(function(values){
                                 x: {field: 'DateApproved', type: 'temporal', title:'Date Approved'},
                                 y: {field: 'InitialApprovalAmount', type: 'quantitative', aggregate:'mean', title:'Mean Approval Amount'},
                                 color: {field:'Gender', type: 'Nominal'}, // default Tableau10
-                                tooltip: [{field:'ProjectCountyName', type:'Nominal'}, 
+                                tooltip: [{field:'ProjectCountyName', type:'Nominal', title:'County'}, 
                                             {field:'Gender', type: 'Nominal'}, 
                                             {field:'InitialApprovalAmount', type: 'Quantitative', aggregate:'mean', title:'Init. App. Amt.'} // figure out how to aggregate this stat. 
                                 ]
@@ -110,7 +113,5 @@ Promise.all([map, data]).then(function(values){
                 ]};
                 vegaEmbed('#race', county_maps);
             });
-
-            // rehook up to full dataset with local dependency
 });
 
