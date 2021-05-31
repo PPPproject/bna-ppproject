@@ -39,7 +39,7 @@ Promise.all([map, data]).then(function(values){
             .attr("class","county")
             //image attributes
             .attr("stroke", "black")
-            .attr("stroke-width", 1)
+            .attr("stroke-width", 0.75)
             .attr("fill", "blue")
             .attr("fill", function(d){
                 var stat = 0
@@ -53,6 +53,14 @@ Promise.all([map, data]).then(function(values){
             })
             .attr("fill-opacity", 1)
             .attr("fill-rule", "nonzero")
+            .on('mouseover', function(d) {
+                console.log(d.properties["name"].toUpperCase());
+                d3.select(this).style('stroke-width',1).style('stroke','orange');
+            })
+            .on('mouseout', function(d) {
+                console.log(d.properties["name"].toUpperCase());
+                d3.select(this).style('stroke-width',0.75).style('stroke','black');
+            })
             .on('click', function(d, i) {
                 
                 // update county variable
@@ -102,5 +110,7 @@ Promise.all([map, data]).then(function(values){
                 ]};
                 vegaEmbed('#race', county_maps);
             });
+
+            // rehook up to full dataset with local dependency
 });
 
