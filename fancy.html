@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PPP Home</title>
+  <link rel="stylesheet" href="assets/css/fancy.css"></link>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script> <!-- Daniel's D3 version, will try changing later, but won't break it for now.-->
+  <script src="https://unpkg.com/topojson-client@3"></script> <!--Same, not sure if unpkg is a cdn. Think it is, seen it before.-->
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+</head>
+
+<body>
+	<!-- Sidebar to jump around page -->
+	<div class="nav">
+		<a href="#background" class="header-text">Intro</a>
+		<a href="#section-1" class="header-text">Viz 1</a>
+		<a href="#section-2" class="header-text">Viz 2</a>
+		<a href="#sources" class="header-text">Sources</a>
+		<a href="https://data-driven.news/bna/2021/"><img src="assets/img/class.png" alt="Classroom icon" style="width:20px;height:20px;"></img></a>
+		<a href="https://github.com/PPPproject/pppproject.github.io"><img src="assets/img/gh-logo.png" alt="Github logo icon" style="width:20px;height:20px;"></img></a>
+	</div>
+
+	<!-- Headers -->
+	<h1 class="section-title">PPP Project</h1>
+	
+	<!-- Sections -->
+	<div id="background">
+		<h2 class="section-title">Intro</h2>
+		<p class="main-text">
+			The Paycheck Protection Program (PPP) had been an important pillar of the federal government’s response to the economic shocks of the COVID-19 pandemic. The program provided qualifying small businesses with low interest, forgivable loans intended to help keep workers on payroll. PPP funds were established as part of the $2 trillion CARES Act, passed in <strong>[insert]</strong>. 
+			<br><br>
+			The program drew criticism for poor rules that allowed large corporations to obtain exorbitant loans while disadvantaging <a href="https://www.nytimes.com/2021/01/11/business/small-businesses-ppp-covid.html">small businesses</a> and <a href="https://www.cbsnews.com/news/women-minorities-new-businesses-pandemic-ppp-loans/">businesses owned by women and minorities</a>. The Biden administration announced <a href="https://www.nytimes.com/2021/02/22/business/smallbusiness/paycheck-protection-program-small-business-biden.html">changes</a> to the program earlier this year to aid small businesses, and in late March extended the deadline to apply to May 31. To date the Small Business Administration (SBA) has approved over $795 billion dollars PPP in loans.
+			<br><br>
+			In April, the SBA released detailed data on PPP-approved lending. This dashboard explores the distribution of over a million PPP loans to businesses in California, with summary statistics by county. 
+		</p>
+	</div>
+
+	<div id="section-1">
+		<h2 class="section-title">Viz 1</h2>
+		<p class="main-text">
+			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
+		</p>
+		<div class="viz" id="rehana-1"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
+			new Runtime().module(define, name => {
+			if (name === "IndustryBar") return new Inspector(document.querySelector("#rehana-1"));
+			});
+		</script>
+		
+		<p class="main-text">
+			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
+		</p>
+		<div class="viz" id="rehana-2"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
+			new Runtime().module(define, name => {
+			if (name === "kBusinessesBar") return new Inspector(document.querySelector("#rehana-2"));
+			});
+		</script>
+
+		<p class="main-text">
+			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
+		</p>
+		<div class="viz" id="rehana-3"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
+			new Runtime().module(define, name => {
+			if (name === "viewof Sectorchart") return new Inspector(document.querySelector("#rehana-3"));
+			});
+		</script>
+		
+
+		<a href="#top" class="main-text">Back to top</a>
+	</div>
+
+	<div id="section-2">
+		<h2 class="section-title">Viz 2</h2>
+		<p class="main-text">
+			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
+		</p>
+		<!-- <p class="main-text">Demographic Information</p> -->
+		
+		<div class="map-parent">
+			<div class="map-child" id="map"></div>
+			<div class="map-child" id="race"></div>
+			<script src="assets/js/map.js"></script>
+			<script>
+				
+			</script>
+		</div>
+		
+		<a href="#top" class="main-text">Back to top</a>
+	</div>
+
+	<!-- Sources/end -->
+	<div id="background">
+		<h2 class="section-title">Sources</h2>
+		<p class="main-text">
+			Data source: <a href="https://www.google.com">google.com</a>
+			<br><br>
+			More information on the PPP Program: <a href="https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program">https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program</a>
+			<br><br>
+			LA Times California geo data: <a href="https://observablehq.com/@datadesk/base-maps-for-all-58-california-counties">https://observablehq.com/@datadesk/base-maps-for-all-58-california-counties</a>
+		</p>
+		<a href="#top" class="main-text">Back to top</a>
+	</div>
+
+</body>
+</html>

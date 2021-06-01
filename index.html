@@ -17,10 +17,10 @@
 <body>
 	<!-- Sidebar to jump around page -->
 	<div class="nav">
-		<a href="#background" class="main-text">Intro</a>
-		<a href="#section-1" class="main-text">Viz 1</a>
-		<a href="#section-2" class="main-text">Viz 2</a>
-		<a href="#sources" class="main-text">Sources</a>
+		<a href="#background" class="header-text">Intro</a>
+		<a href="#section-1" class="header-text">Viz 1</a>
+		<a href="#section-2" class="header-text">Viz 2</a>
+		<a href="#sources" class="header-text">Sources</a>
 		<a href="https://data-driven.news/bna/2021/"><img src="assets/img/class.png" alt="Classroom icon" style="width:20px;height:20px;"></img></a>
 		<a href="https://github.com/PPPproject/pppproject.github.io"><img src="assets/img/gh-logo.png" alt="Github logo icon" style="width:20px;height:20px;"></img></a>
 	</div>
@@ -87,14 +87,14 @@
 		<p class="main-text">
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 		</p>
+		<!-- <p class="main-text">Demographic Information</p> -->
 		
-		<div class="viz" id="map"></div>
-		<p class="main-text">Demographic Information</p>
-		<div class="viz" id="race"></div>
-		<p class="main-text">Program Overview</p>
-		<div class="viz" id="overview"></div>
-		<script src="assets/js/map.js"></script>
-		<script src="assets/js/test.js"></script>
+		<div class="map-parent">
+			<div class="map-child" id="map"></div>
+			<div class="map-child" id="race"></div>
+			<script src="assets/js/map.js"></script>
+		</div>
+		<p><br></p>
 		<a href="#top" class="main-text">Back to top</a>
 	</div>
 

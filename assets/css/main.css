@@ -1,13 +1,13 @@
 /* background color */
 .nav {
-  background-color: #84bcfdd5;
+  background-color: #003471d5;
   overflow: hidden;
 }
 
 /* links */
 .nav a {
   float: left;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -24,6 +24,7 @@
 .main {
   margin: 20%; /* Same as the width of the sidebar */	
   resize: both;
+  background-color: #FFFAEC;
 }
 
 /* ??? Link styling not working? Not grabbing it right? */
@@ -51,10 +52,30 @@
   font-family: "Helvetica";
   color: black;
   display: block;
+  margin-left: 10%; 
+  margin-right: 10%; 
+}
+
+.header-text {
+  font-family: "Helvetica";
+  color: black;
+  display: block;
 }
 
 .main-text {
   font-family: "Helvetica";
   color: black;
   display: block;
+  margin-left: 10%; 
+  margin-right: 10%; 
 }
+
+.map-parent {
+  display: flex;
+}
+.map-child {
+  flex: 1;
+}  
+.map-child:first-child {
+  margin-left: 15%;
+} 

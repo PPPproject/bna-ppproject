@@ -1,6 +1,6 @@
 // setup
 var w = 450;
-var h = 700;
+var h = 1000;
 var county = "LOS ANGELES";
 
 var svgContainer = d3.select("#map")

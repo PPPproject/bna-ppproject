@@ -1,0 +1,89 @@
+body {
+    background-color: rgba(0, 0, 2, 0.632);
+}
+
+/* background color */
+.nav {
+    background-color: #003471d5;
+    overflow: hidden;
+  }
+  
+  /* links */
+  .nav a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* on hover buttons */
+  .nav a:hover {
+    background-color: #ddd;
+    color: gray;
+  }
+  
+  /* all page content */
+  .main {
+    margin: 20%; /* Same as the width of the sidebar */	
+    resize: both;
+    background-color: #FFFAEC;
+  }
+  
+  /* ??? Link styling not working? Not grabbing it right? */
+  .main a{
+    color: white;
+    font-family: helvetica;
+  }
+  
+  .main a:hover {
+    font-family: "Helvetica";
+    color: rgba(2, 4, 109, 0.89);
+  }
+  
+  .main a:active {
+    font-family: "Helvetica";
+    color: blue;
+  }
+  
+  .viz {
+    margin: 15%; /* Same as the width of the sidebar */	
+    resize: both;
+  }
+  
+  .section-title {
+    font-family: "Helvetica";
+    color: white;
+    display: block;
+    margin-left: 10%; 
+    margin-right: 10%; 
+  }
+  
+  .header-text {
+    font-family: "Helvetica";
+    color: white;
+    display: block;
+  }
+  
+  .main-text {
+    font-family: "Helvetica";
+    color: white;
+    display: block;
+    margin-left: 10%; 
+    margin-right: 10%; 
+  }
+  
+  .map-parent {
+    display: flex;
+  }
+  .map-child {
+    flex: 1;
+  }  
+  .map-child:first-child {
+    margin-left: 15%;
+  } 
+  .map-child:second-child {
+    margin-right: 15%;
+    padding-top: 20%;
+  } 
