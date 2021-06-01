@@ -1,6 +1,6 @@
 /* background color */
 .nav {
-  background-color: #7e9a9a; /* tableau blue #446f9d;*/ 
+  background-color: #84bcfd;
   overflow: hidden;
 }
 
@@ -26,8 +26,25 @@
   resize: both;
 }
 
+/* ??? Link styling not working? Not grabbing it right? */
+.main a{
+  color: black;
+  font-family: helvetica;
+  text-decoration: none;
+}
+
+.main a:hover {
+  font-family: "Helvetica";
+  text-decoration: underline;
+}
+
+.main a:active {
+  font-family: "Helvetica";
+  color: blue;
+}
+
 .viz {
-  margin: 5%; /* Same as the width of the sidebar */	
+  margin-left: 45%; /* Same as the width of the sidebar */	
   resize: both;
 }
 
@@ -43,18 +60,3 @@
   display: block;
 }
 
-a{
-  color: black;
-  font-family: helvetica;
-  text-decoration: none;
-}
-
-a:hover {
-  font-family: "Helvetica";
-  text-decoration: underline;
-}
-
-a:active {
-  font-family: "Helvetica";
-  color: blue;
-}

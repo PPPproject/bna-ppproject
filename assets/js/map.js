@@ -59,11 +59,12 @@ Promise.all([map, data]).then(function(values){
             .attr("fill-rule", "nonzero")
             .on('mouseover', function(d) {
                 // console.log(d.properties["name"].toUpperCase());
-                d3.select(this).style('stroke-width',1).style('stroke','#e49444');
+                d3.select(this).style('stroke-width',1).style('stroke','#e49444').style('cursor','pointer'); // cannot get mouse icon to change
             })
             .on('mouseout', function(d) {
                 // console.log(d.properties["name"].toUpperCase());
                 d3.select(this).style('stroke-width',0.5).style('stroke','black');
+                d3.select(this).style("cursor", "default"); 
             })
             .on('click', function(d, i) {
                 
