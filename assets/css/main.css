@@ -79,3 +79,6 @@
 .map-child:first-child {
   margin-left: 15%;
 } 
+.map-child:second-child {
+  margin-right: 15%;
+} 
