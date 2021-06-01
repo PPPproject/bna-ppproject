@@ -1,13 +1,13 @@
 /* background color */
 .nav {
-  background-color: #84bcfd;
+  background-color: #84bcfdd5;
   overflow: hidden;
 }
 
 /* links */
 .nav a {
   float: left;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -22,7 +22,7 @@
 
 /* all page content */
 .main {
-  margin: 10%; /* Same as the width of the sidebar */	
+  margin: 20%; /* Same as the width of the sidebar */	
   resize: both;
 }
 
@@ -30,12 +30,11 @@
 .main a{
   color: black;
   font-family: helvetica;
-  text-decoration: none;
 }
 
 .main a:hover {
   font-family: "Helvetica";
-  text-decoration: underline;
+  color: rgba(2, 4, 109, 0.89);
 }
 
 .main a:active {
@@ -44,7 +43,7 @@
 }
 
 .viz {
-  margin-left: 45%; /* Same as the width of the sidebar */	
+  margin: 15%; /* Same as the width of the sidebar */	
   resize: both;
 }
 
@@ -59,4 +58,3 @@
   color: black;
   display: block;
 }
-
