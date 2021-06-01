@@ -34,7 +34,7 @@
 		<p class="main-text">
 			The Paycheck Protection Program (PPP) had been an important pillar of the federal government’s response to the economic shocks of the COVID-19 pandemic. The program provided qualifying small businesses with low interest, forgivable loans intended to help keep workers on payroll. PPP funds were established as part of the $2 trillion CARES Act, passed in <strong>[insert]</strong>. 
 			<br><br>
-			The program drew criticism for poor rules that allowed large corporations to obtain exorbitant loans while disadvantaging <a href="https://www.nytimes.com/2021/01/11/business/small-businesses-ppp-covid.html" class="main-text">small businesses</a> and <a href="https://www.cbsnews.com/news/women-minorities-new-businesses-pandemic-ppp-loans/" class="main-text">businesses owned by women and minorities</a>. The Biden administration announced <a href="https://www.nytimes.com/2021/02/22/business/smallbusiness/paycheck-protection-program-small-business-biden.html" class="main-text">changes</a> to the program earlier this year to aid small businesses, and in late March extended the deadline to apply to May 31. To date the Small Business Administration (SBA) has approved over $795 billion dollars PPP in loans.
+			The program drew criticism for poor rules that allowed large corporations to obtain exorbitant loans while disadvantaging <a href="https://www.nytimes.com/2021/01/11/business/small-businesses-ppp-covid.html">small businesses</a> and <a href="https://www.cbsnews.com/news/women-minorities-new-businesses-pandemic-ppp-loans/">businesses owned by women and minorities</a>. The Biden administration announced <a href="https://www.nytimes.com/2021/02/22/business/smallbusiness/paycheck-protection-program-small-business-biden.html">changes</a> to the program earlier this year to aid small businesses, and in late March extended the deadline to apply to May 31. To date the Small Business Administration (SBA) has approved over $795 billion dollars PPP in loans.
 			<br><br>
 			In April, the SBA released detailed data on PPP-approved lending. This dashboard explores the distribution of over a million PPP loans to businesses in California, with summary statistics by county. 
 		</p>
@@ -50,21 +50,34 @@
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
 			new Runtime().module(define, name => {
-			if (name === "viewof CombinedBar") return new Inspector(document.querySelector("#rehana-1"));
+			if (name === "IndustryBar") return new Inspector(document.querySelector("#rehana-1"));
 			});
 		</script>
+		
 		<p class="main-text">
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
 		</p>
-
 		<div class="viz" id="rehana-2"></div>
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
 			new Runtime().module(define, name => {
-			if (name === "viewof Sectorchart") return new Inspector(document.querySelector("#rehana-2"));
+			if (name === "kBusinessesBar") return new Inspector(document.querySelector("#rehana-2"));
 			});
 		</script>
+
+		<p class="main-text">
+			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
+		</p>
+		<div class="viz" id="rehana-3"></div>
+		<script type="module">
+			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
+			new Runtime().module(define, name => {
+			if (name === "viewof Sectorchart") return new Inspector(document.querySelector("#rehana-3"));
+			});
+		</script>
+		
 
 		<a href="#top" class="main-text">Back to top</a>
 	</div>

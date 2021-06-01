@@ -42,3 +42,19 @@
   color: black;
   display: block;
 }
+
+a{
+  color: black;
+  font-family: helvetica;
+  text-decoration: none;
+}
+
+a:hover {
+  font-family: "Helvetica";
+  text-decoration: underline;
+}
+
+a:active {
+  font-family: "Helvetica";
+  color: blue;
+}
