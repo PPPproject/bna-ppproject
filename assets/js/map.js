@@ -82,7 +82,7 @@ Promise.all([map, data]).then(function(values){
                         {
                             transform: [{filter: `datum.ProjectCountyName=="${county}"`},
                                         {filter: 'year(datum.DateApproved)<2021'},
-                                        {filter: 'month(datum.DateApproved)=="03"'} // for some reason this does the month AFTER the one you put 
+                                        {filter: 'month(datum.DateApproved)=="02"'} // for some reason this does the month AFTER the one you put 
                                 ],
                             mark: 'bar',
                             encoding: {
@@ -98,7 +98,7 @@ Promise.all([map, data]).then(function(values){
                         {
                             transform: [{filter: `datum.ProjectCountyName=="${county}"`},
                                         {filter: 'year(datum.DateApproved)<2021'},
-                                        {filter: 'month(datum.DateApproved)=="03"'} // for some reason this does the month AFTER the one you put 
+                                        {filter: 'month(datum.DateApproved)=="02"'} // for some reason this does the month AFTER the one you put 
                                 ],
                             mark: 'bar',
                             encoding: {
