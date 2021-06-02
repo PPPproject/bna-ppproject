@@ -41,33 +41,26 @@
 	</div>
 
 	<div id="section-1">
-		<h2 class="section-title">Viz 1</h2>
-		<p class="main-text">
-			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
-		</p>
 		<div class="viz" id="rehana-1"></div>
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
 			new Runtime().module(define, name => {
-			if (name === "IndustryBar") return new Inspector(document.querySelector("#rehana-1"));
+			if (name === "VolumeBar") return new Inspector(document.querySelector("#rehana-1"));
 			});
 		</script>
-		
-		<p class="main-text">
-			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
-		</p>
+
 		<div class="viz" id="rehana-2"></div>
 		<script type="module">
 			import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 			import define from "https://api.observablehq.com/@rehanam93/which-industries-did-ppp-loans-go-to-in-california.js?v=3";
 			new Runtime().module(define, name => {
-			if (name === "kBusinessesBar") return new Inspector(document.querySelector("#rehana-2"));
+			if (name === "MeanLoanBar") return new Inspector(document.querySelector("#rehana-2"));
 			});
 		</script>
 
 		<p class="main-text">
-			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu 
+			Some sectors received more support than others. In California, restaurants received the most PPP funds: over $6.1 billion went to full-service restaurants. (Hover for loan volume by sector. Each color represents an industry and 1G = 1 billion.)
 		</p>
 		<div class="viz" id="rehana-3"></div>
 		<script type="module">
@@ -77,18 +70,14 @@
 			if (name === "viewof Sectorchart") return new Inspector(document.querySelector("#rehana-3"));
 			});
 		</script>
-		
 
 		<a href="#top" class="main-text">Back to top</a>
 	</div>
 
 	<div id="section-2">
-		<h2 class="section-title">Viz 2</h2>
 		<p class="main-text">
 			<strong>BLURB</strong> sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 		</p>
-		<!-- <p class="main-text">Demographic Information</p> -->
-		
 		<div class="map-parent">
 			<div class="map-child" id="map"></div>
 			<div class="map-child" id="race"></div>
