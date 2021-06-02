@@ -83,7 +83,7 @@
   margin-right: 15%;
 } 
 
-#instructions {
+.instructions {
   font-family: "Helvetica";
   color: gray;
   display: block;
