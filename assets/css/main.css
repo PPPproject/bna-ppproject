@@ -82,3 +82,11 @@
 .map-child:second-child {
   margin-right: 15%;
 } 
+
+#instructions {
+  font-family: "Helvetica";
+  color: gray;
+  display: block;
+  margin-left: 10%; 
+  margin-right: 10%; 
+}
